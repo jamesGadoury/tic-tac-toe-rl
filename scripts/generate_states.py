@@ -1,14 +1,10 @@
 from collections import defaultdict, deque
 from json import dump
-from pathlib import Path
 
-from serialization import serialize
+from common import REACHED_PATH, TERMINAL_STATES_PATH, serialize
 
 from tic_tac_toe import new_board
 from tic_tac_toe.tic_tac_toe import Board, available_plays, is_game_over, transition
-
-REACHED_PATH: Path = Path("reached.json")
-TERMINAL_STATES_PATH: Path = Path("terminal_states.json")
 
 
 def main():
