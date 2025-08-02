@@ -103,6 +103,11 @@ def game_state(board: Board) -> GameState:
 
 
 @cache
+def is_game_over(board: Board) -> bool:
+    return game_state(board) != GameState.INCOMPLETE
+
+
+@cache
 def is_tied(board: Board) -> bool:
     return all([marker != Marker.EMPTY for marker in board])
 
